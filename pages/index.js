@@ -7,13 +7,6 @@ import {
   Switch,
   FormGroup,
   FormControlLabel,
-  Table,
-  TableHead,
-  TableBody,
-  TableContainer,
-  TableRow,
-  TableCell,
-  Paper,
   Dialog,
   DialogContent,
   RadioGroup,
@@ -155,6 +148,7 @@ export default function ProjectManager() {
 
     const rowData = rows.map((row) => Object.values(row).filter((option) => option !== true && option !== false));
 
+    // [false, false, true, false, ...]
     const matches = rowData.map((row) =>
       row.map((option) => option.toLowerCase().includes(event.target.value.toLowerCase()))
     );
